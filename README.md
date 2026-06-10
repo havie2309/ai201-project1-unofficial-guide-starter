@@ -2,6 +2,7 @@
 
 ## Demo Video
 [Watch the demo on Loom](https://www.loom.com/share/37a97ceeefc04d4e82462c2c5485100d)
+[Evaluation Report](https://www.loom.com/share/6ebfa3b757b1419b837bf4f4ac6981e4)
 
 ---
 
@@ -55,15 +56,29 @@ character cuts so chunks never end mid-word or mid-sentence.
 ## Sample Chunks
 
 **Chunk 1** (prof_andrea_hall_reviews.txt, chunk #0)
+Professor: Andrea Hall | Department: Economics Review 1: Students describe
+the professor as engaging and enthusiastic about economics. Lectures often
+connect economic theories to current events and policy discussions.
 
 **Chunk 2** (prof_andrea_hall_reviews.txt, chunk #1)
+theories to current events and policy discussions. Many students appreciate
+the practical examples used throughout the course. The material feels
+relevant beyond the classroom.
 
 **Chunk 3** (prof_collin_nolte_reviews.txt, chunk #0)
+theories to current events and policy discussions. Many students appreciate
+the practical examples used throughout the course. The material feels
+relevant beyond the classroom.
 
 **Chunk 4** (prof_sam_rebelsky_reviews.txt, chunk #2)
+emphasized over simply getting the correct answer. Review 3: Office hours
+receive overwhelmingly positive feedback from students. The professor is
+approachable and takes time to work through problems carefully.
 
 **Chunk 5** (prof_jonathan_wells_reviews.txt, chunk #3)
-
+The professor is known for being patient when answering questions. Students
+mention that office hours are welcoming and helpful. Homework assignments
+reinforce important concepts effectively.
 ---
 
 ## Embedding Model
@@ -84,9 +99,127 @@ structure of professor reviews.
 
 ---
 
+---
+
+## Retrieval Test Results
+
+### Query 1: "Which professor has the most helpful office hours?"
+
+**Top returned chunks:**
+
+- (prof_andrea_hall_reviews.txt): "Office hours are frequently described as 
+helpful and welcoming. The professor takes time to clarify difficult concepts 
+and answer questions thoroughly. Students feel supported when seeking 
+additional help."
+
+- (prof_sam_rebelsky_reviews.txt): "Office hours receive overwhelmingly 
+positive feedback from students. The professor is approachable and takes 
+time to work through problems carefully."
+
+- (prof_jonathan_wells_reviews.txt): "The professor is known for being 
+patient when answering questions. Students mention that office hours are 
+welcoming and helpful."
+
+**Why these chunks are relevant:** The query asks specifically about office 
+hours. The retrieval correctly returned chunks from three different professor 
+files that each contain explicit mentions of office hours. The semantic 
+search matched the concept of "helpful office hours" to phrases like 
+"welcoming and helpful," "overwhelmingly positive feedback," and "takes time 
+to clarify" — even though those exact words weren't in the query.
+
+---
+
+### Query 2: "What do students say about Collin Nolte's teaching style?"
+
+**Top returned chunks:**
+
+- (prof_collin_nolte_reviews.txt): "Students describe the professor as 
+knowledgeable and passionate about physics. His lectures focus on building 
+a strong conceptual understanding before moving into calculations."
+
+- (prof_collin_nolte_reviews.txt): "The professor is praised for making 
+complex topics approachable. Students appreciate the step-by-step problem 
+solving approach used in lectures."
+
+**Why these chunks are relevant:** This query names a specific professor. 
+The retrieval correctly prioritized chunks from prof_collin_nolte_reviews.txt 
+because the professor's name appears in the chunk header and the content 
+directly describes teaching style. The semantic similarity between "teaching 
+style" and phrases like "lectures focus on," "step-by-step approach," and 
+"explains concepts" drove accurate retrieval.
+
+---
+
+### Query 3: "Which professor focuses most on real-world applications?"
+
+**Top returned chunks:**
+
+- (prof_jonathan_wells_reviews.txt): "Students appreciate the use of 
+real-world datasets in class activities. Concepts that initially seem 
+difficult become easier through repeated examples."
+
+- (prof_shonda_kuiper_reviews.txt): "Lectures frequently incorporate 
+real-world data and current examples to illustrate statistical concepts."
+
+- (prof_andrea_hall_reviews.txt): "Lectures often connect economic theories 
+to current events and policy discussions. The material feels relevant beyond 
+the classroom."
+
+---
+
+## Example System Responses
+
+### Response 1 — With source attribution
+
+**Query:** What do students commonly say about Collin Nolte's teaching style?
+
+**System response:**
+Students describe Professor Collin Nolte as knowledgeable and passionate
+about physics. His lectures focus on building a strong conceptual
+understanding before moving into calculations.
+Sources: prof_collin_nolte_reviews.txt
+
+---
+
+### Response 2 — With source attribution
+
+**Query:** Which professor focuses most on real-world applications?
+
+**System response:**
+Based on the reviews, professors Shonda Kuiper and Jonathan Wells are
+highlighted for their use of real-world examples in their lectures.
+Professor Andrea Hall also uses real-world examples connecting economic
+theories to current events.
+Sources: prof_jonathan_wells_reviews.txt, prof_shonda_kuiper_reviews.txt,
+prof_andrea_hall_reviews.txt
+
+---
+
+### Out-of-scope query — Refusal response
+
+**Query:** What is the best campus dining hall at Grinnell?
+
+**System response:**
+I don't have enough information on that.
+
+This confirms grounding is working — the system does not generate a 
+plausible answer from general knowledge when the topic is outside the 
+document collection.
+
+---
+
+
 ## Grounded Generation
 
 **System prompt grounding instruction:**
+You are a helpful assistant for students looking for information about
+professors and courses. Answer the question using ONLY the information
+provided in the documents below. Do not use any outside knowledge or make
+assumptions beyond what is written. If the documents do not contain enough
+information to answer the question, respond with exactly:
+"I don't have enough information on that."
+Always end your answer by listing which documents you used, like this:
+Sources: prof_smith_reviews.txt, prof_jones_reviews.txt
 
 **How source attribution is surfaced in the response:** The prompt instructs 
 the model to end every answer by listing which documents it used in the 
@@ -213,3 +346,29 @@ with no example questions and an emoji in the title. I directed Claude to
 redesign the UI with a cleaner dark-button style, remove the emoji, add 4 
 clickable example question buttons, and stack the answer and sources 
 vertically instead of side by side.
+
+---
+
+## Stretch Features
+
+### Chunking Strategy Comparison
+I will test two chunking strategies on the same 5 evaluation queries:
+- Strategy A: Current sentence-boundary chunking (chunk_size=250, overlap=50)
+- Strategy B: Fixed character chunking (chunk_size=400, overlap=80)
+I will compare retrieval quality by checking distance scores and relevance 
+of returned chunks for each query.
+
+### Metadata Filtering
+I will add a professor name dropdown to the Gradio UI that filters retrieval 
+to only return chunks from the selected professor's file. This uses ChromaDB's 
+where clause to filter by source metadata.
+
+### Conversational Memory
+I will add a chat history list to the Gradio UI. Each turn appends the 
+previous question and answer to the Groq message history, allowing follow-up 
+questions like "What about their exams?" to reference the previous professor.
+
+### Hybrid Search
+I will install rank_bm25 and implement BM25 keyword search alongside semantic 
+search. Scores from both will be combined using Reciprocal Rank Fusion (RRF). 
+I will compare results on 3 queries and report which method performed better.
