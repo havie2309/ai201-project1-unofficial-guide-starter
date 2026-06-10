@@ -1,0 +1,677 @@
+[
+  {
+    "text": "Professor: Andrea Hall | Department: Economics Review 1: Students describe the professor as engaging and enthusiastic about economics. Lectures often connect economic theories to current events and policy discussions.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 0
+  },
+  {
+    "text": "theories to current events and policy discussions. Many students appreciate the practical examples used throughout the course. The material feels relevant beyond the classroom.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 1
+  },
+  {
+    "text": "The material feels relevant beyond the classroom. Review 2: Several students mention that assignments emphasize critical thinking and analysis. Rather than memorizing definitions, students are expected to apply economic concepts to new situations.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 2
+  },
+  {
+    "text": "cted to apply economic concepts to new situations. Homework can be challenging but helps reinforce important ideas. Consistent effort is rewarded. Review 3: Office hours are frequently described as helpful and welcoming.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 3
+  },
+  {
+    "text": "are frequently described as helpful and welcoming. The professor takes time to clarify difficult concepts and answer questions thoroughly. Students feel supported when seeking additional help. Many reviews recommend attending office hours regularly.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 4
+  },
+  {
+    "text": "eviews recommend attending office hours regularly. Review 4: Students appreciate the organization of the course and the clear expectations. Lecture materials are well structured and easy to follow.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 5
+  },
+  {
+    "text": "materials are well structured and easy to follow. Deadlines are communicated early and grading criteria are transparent. The class runs smoothly throughout the semester. Review 5: Exams are generally considered fair and aligned with course content.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 6
+  },
+  {
+    "text": "y considered fair and aligned with course content. Students report that understanding economic reasoning is more important than memorization. Practice problems and class discussions are useful preparation.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 7
+  },
+  {
+    "text": "lems and class discussions are useful preparation. Those who keep up with the material tend to perform well. Review 6: Many students highlight the professor's ability to explain complex topics in an accessible way.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 8
+  },
+  {
+    "text": "ty to explain complex topics in an accessible way. Economic models and theories are broken down into understandable components. Real-world examples help reinforce learning. The teaching style is approachable and effective.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 9
+  },
+  {
+    "text": "The teaching style is approachable and effective. Review 7: Reviews often mention that class discussions are engaging and encourage participation. Different viewpoints are welcomed and explored respectfully.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 10
+  },
+  {
+    "text": "viewpoints are welcomed and explored respectfully. Students feel comfortable contributing ideas during class. The learning environment is supportive and interactive.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 11
+  },
+  {
+    "text": "earning environment is supportive and interactive. Review 8: Students frequently recommend the course to both economics majors and non-majors. The workload is manageable with steady effort.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 12
+  },
+  {
+    "text": "rs. The workload is manageable with steady effort. Many students leave the course with a stronger understanding of economic thinking. Overall satisfaction with the course is very high.",
+    "source": "prof_andrea_hall_reviews.txt",
+    "chunk_index": 13
+  },
+  {
+    "text": "Professor: Charles Curtsinger | Department: Computer Science Review 1: Students frequently mention that the course moves at a fast pace. Lectures focus heavily on understanding how systems work under the hood.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 0
+  },
+  {
+    "text": "on understanding how systems work under the hood. Assignments can be challenging but are closely tied to material covered in class. Many students recommend starting projects early.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 1
+  },
+  {
+    "text": ". Many students recommend starting projects early. Review 2: The professor is described as knowledgeable and passionate about computer systems. Office hours are helpful for debugging difficult programming assignments.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 2
+  },
+  {
+    "text": "l for debugging difficult programming assignments. Several students mention learning a great deal even when the workload feels demanding. Review 3: Students say projects require strong problem-solving skills and independent thinking.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 3
+  },
+  {
+    "text": "g problem-solving skills and independent thinking. Instructions are generally clear, but assignments can take longer than expected. Those who keep up with the material tend to perform well.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 4
+  },
+  {
+    "text": "ho keep up with the material tend to perform well. Review 4: Many reviews describe the class as difficult but rewarding. Exams emphasize conceptual understanding rather than memorization.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 5
+  },
+  {
+    "text": "conceptual understanding rather than memorization. Students appreciate seeing real-world applications of systems concepts. Review 5: Lectures are often described as engaging and detailed.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 6
+  },
+  {
+    "text": "ures are often described as engaging and detailed. Students recommend attending class regularly because examples discussed in lecture appear later in assignments. The workload is above average but manageable.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 7
+  },
+  {
+    "text": "nts. The workload is above average but manageable. Review 6: Several students mention that programming projects are the most valuable part of the course. Feedback on assignments helps students improve over time.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 8
+  },
+  {
+    "text": "k on assignments helps students improve over time. Collaboration policies are clearly communicated. Review 7: Students appreciate the professor's technical expertise and practical examples.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 9
+  },
+  {
+    "text": "ssor's technical expertise and practical examples. Some reviews note that the pace may feel intimidating for beginners. Consistent effort throughout the semester is important.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 10
+  },
+  {
+    "text": "stent effort throughout the semester is important. Review 8: The course is frequently recommended to students interested in software engineering and systems programming.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 11
+  },
+  {
+    "text": "d in software engineering and systems programming. Expectations are high, but many students feel the experience prepares them well for future coursework.",
+    "source": "prof_charles_curtsinger_reviews.txt",
+    "chunk_index": 12
+  },
+  {
+    "text": "Professor: Collin Nolte | Department: Physics Review 1: Students describe the professor as knowledgeable and passionate about physics. Lectures focus on building a strong conceptual understanding before moving into calculations.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 0
+  },
+  {
+    "text": "ual understanding before moving into calculations. Many students appreciate the clear explanations provided during class. The material is presented in a logical sequence.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 1
+  },
+  {
+    "text": ". The material is presented in a logical sequence. Review 2: Several reviews mention that problem-solving is emphasized throughout the course. Homework assignments require applying concepts rather than simply memorizing formulas.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 2
+  },
+  {
+    "text": "g concepts rather than simply memorizing formulas. Students feel challenged but also gain confidence over time. Practice is important for success. Review 3: Office hours receive positive feedback from many students.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 3
+  },
+  {
+    "text": "ours receive positive feedback from many students. The professor is patient when working through difficult problems. Questions are encouraged and answered thoroughly. Students often leave with a better understanding of the material.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 4
+  },
+  {
+    "text": "leave with a better understanding of the material. Review 4: Students appreciate how complex topics are broken into smaller, manageable steps. Examples discussed during lectures help clarify difficult concepts.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 5
+  },
+  {
+    "text": "d during lectures help clarify difficult concepts. The teaching style is structured and approachable. Learning feels progressive rather than overwhelming. Review 5: Exams are generally viewed as fair and representative of course content.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 6
+  },
+  {
+    "text": "ewed as fair and representative of course content. Students who complete practice problems and attend lectures tend to perform well. Understanding the reasoning behind solutions is important. Assessments reward preparation and effort.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 7
+  },
+  {
+    "text": "ortant. Assessments reward preparation and effort. Review 6: Many students highlight the professor's enthusiasm for physics. Real-world applications are frequently used to demonstrate abstract concepts.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 8
+  },
+  {
+    "text": "frequently used to demonstrate abstract concepts. This helps students connect theory with practical situations. Lectures remain engaging throughout the semester. Review 7: Reviews often mention that feedback on assignments is useful and constructive.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 9
+  },
+  {
+    "text": "eedback on assignments is useful and constructive. Students learn from mistakes and improve their problem-solving skills. Expectations are communicated clearly. Grading is considered fair and consistent.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 10
+  },
+  {
+    "text": "learly. Grading is considered fair and consistent. Review 8: Students frequently recommend the course to others interested in physics. The workload is manageable with steady effort.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 11
+  },
+  {
+    "text": "cs. The workload is manageable with steady effort. The combination of strong instruction and supportive guidance is highly valued. Overall satisfaction with the course is very high.",
+    "source": "prof_collin_nolte_reviews.txt",
+    "chunk_index": 12
+  },
+  {
+    "text": "Professor: Cora Jakubiak | Department: Education Review 1: Students describe the professor as supportive and genuinely invested in student success. Class discussions are engaging and encourage participation from everyone.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 0
+  },
+  {
+    "text": "ngaging and encourage participation from everyone. Many students appreciate the welcoming classroom environment. The course emphasizes reflection and thoughtful dialogue.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 1
+  },
+  {
+    "text": "rse emphasizes reflection and thoughtful dialogue. Review 2: Several reviews mention that assignments connect educational theory to real-world classroom experiences. Students are encouraged to think critically about teaching and learning.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 2
+  },
+  {
+    "text": "d to think critically about teaching and learning. The workload is manageable with consistent effort. Expectations are communicated clearly. Review 3: Office hours are frequently described as helpful and approachable.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 3
+  },
+  {
+    "text": "frequently described as helpful and approachable. The professor takes time to discuss ideas and provide feedback on assignments. Students feel comfortable asking questions and seeking guidance. Support is available throughout the semester.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 4
+  },
+  {
+    "text": "nce. Support is available throughout the semester. Review 4: Students appreciate the emphasis on collaboration and discussion. Different perspectives are welcomed and explored respectfully.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 5
+  },
+  {
+    "text": "rspectives are welcomed and explored respectfully. Class activities help connect concepts to practical educational settings. The learning environment feels inclusive and engaging.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 6
+  },
+  {
+    "text": "learning environment feels inclusive and engaging. Review 5: Many students mention receiving detailed and constructive feedback on written work. Comments help improve both understanding and communication skills.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 7
+  },
+  {
+    "text": "prove both understanding and communication skills. The professor encourages revision and growth throughout the course. Learning is prioritized over simply earning grades.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 8
+  },
+  {
+    "text": "earning is prioritized over simply earning grades. Review 6: Reviews often highlight the professor's passion for education and student development. Course materials are relevant and thought-provoking.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 9
+  },
+  {
+    "text": "urse materials are relevant and thought-provoking. Students are encouraged to reflect on their own educational experiences. Discussions frequently extend beyond the classroom.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 10
+  },
+  {
+    "text": "iscussions frequently extend beyond the classroom. Review 7: Students describe the course as intellectually engaging and meaningful. Assignments encourage critical thinking about educational systems and practices.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 11
+  },
+  {
+    "text": "thinking about educational systems and practices. The professor creates a supportive atmosphere for exploring complex topics. Participation is highly valued.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 12
+  },
+  {
+    "text": "ng complex topics. Participation is highly valued. Review 8: Many students recommend the course to anyone interested in education or social issues. The combination of engaging discussions and supportive instruction is frequently praised.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 13
+  },
+  {
+    "text": "and supportive instruction is frequently praised. Students leave with a deeper understanding of teaching and learning. Overall experiences are highly positive.",
+    "source": "prof_cora_jakubiak_reviews.txt",
+    "chunk_index": 14
+  },
+  {
+    "text": "Professor: Jenny Kenkel | Department: Mathematics Review 1: Students describe the professor as clear and organized when presenting mathematical concepts. Complex topics are broken into manageable steps.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 0
+  },
+  {
+    "text": ". Complex topics are broken into manageable steps. Many students appreciate the detailed explanations provided during lectures. The course emphasizes understanding rather than memorization.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 1
+  },
+  {
+    "text": "emphasizes understanding rather than memorization. Review 2: Several students mention that homework assignments reinforce important ideas discussed in class. Practice is essential for success in the course.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 2
+  },
+  {
+    "text": ". Practice is essential for success in the course. Students who stay consistent with assignments generally perform well. Expectations are communicated clearly. Review 3: Office hours are frequently described as supportive and welcoming.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 3
+  },
+  {
+    "text": "frequently described as supportive and welcoming. The professor takes time to work through difficult problems with students. Many reviews mention feeling more confident after seeking help. Questions are encouraged during and outside of class.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 4
+  },
+  {
+    "text": "stions are encouraged during and outside of class. Review 4: Students appreciate the logical structure of lectures. Topics build naturally on previous material throughout the semester.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 5
+  },
+  {
+    "text": "ally on previous material throughout the semester. Examples are used regularly to demonstrate problem-solving techniques. The pace is challenging but manageable. Review 5: Exams are considered fair and aligned with course content.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 6
+  },
+  {
+    "text": "e considered fair and aligned with course content. Students report that preparation through homework and practice problems is usually sufficient. Understanding the reasoning behind solutions is important. Memorization alone is not enough.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 7
+  },
+  {
+    "text": "ns is important. Memorization alone is not enough. Review 6: Many students mention that feedback on assignments is helpful and constructive. The professor identifies common mistakes and explains how to improve.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 8
+  },
+  {
+    "text": "ifies common mistakes and explains how to improve. This helps students strengthen their mathematical thinking. Learning is emphasized over simply earning points.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 9
+  },
+  {
+    "text": "Learning is emphasized over simply earning points. Review 7: Reviews often highlight the professor's patience and dedication to student success. Students feel comfortable asking questions in class.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 10
+  },
+  {
+    "text": "udents feel comfortable asking questions in class. Difficult concepts become easier through repeated explanations and examples. The classroom environment is supportive.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 11
+  },
+  {
+    "text": "examples. The classroom environment is supportive. Review 8: Students frequently recommend the course to others interested in mathematics. Consistent effort leads to strong learning outcomes.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 12
+  },
+  {
+    "text": "nsistent effort leads to strong learning outcomes. The combination of clear instruction and accessible support is highly valued. Overall experiences are very positive.",
+    "source": "prof_jenny_kenkel_reviews.txt",
+    "chunk_index": 13
+  },
+  {
+    "text": "Professor: Jonathan Wells | Department: Statistics Review 1: Students consistently describe lectures as organized and easy to follow. Statistical concepts are explained with practical examples that make the material approachable.",
+    "source": "prof_jonathan_wells_reviews.txt",
+    "chunk_index": 0
+  },
+  {
+    "text": "ical examples that make the material approachable. Many students appreciate the supportive classroom environment. Review 2: The professor is known for being patient when answering questions.",
+    "source": "prof_jonathan_wells_reviews.txt",
+    "chunk_index": 1
+  },
+  {
+    "text": "known for being patient when answering questions. Students mention that office hours are welcoming and helpful. Homework assignments reinforce important concepts effectively.",
+    "source": "prof_jonathan_wells_reviews.txt",
+    "chunk_index": 2
+  },
+  {
+    "text": "ignments reinforce important concepts effectively. Review 3: Reviews often highlight the professor's enthusiasm for statistics. Students feel encouraged to participate during class discussions.",
+    "source": "prof_jonathan_wells_reviews.txt",
+    "chunk_index": 3
+  },
+  {
+    "text": "ncouraged to participate during class discussions. Assessments are generally viewed as fair and aligned with course material. Review 4: Several students note that assignments require careful attention to detail.",
+    "source": "prof_jonathan_wells_reviews.txt",
+    "chunk_index": 4
+  },
+  {
+    "text": "t assignments require careful attention to detail. Grading standards are clear and expectations are communicated early. The workload is considered reasonable. Review 5: Students appreciate the use of real-world datasets in class activities.",
+    "source": "prof_jonathan_wells_reviews.txt",
+    "chunk_index": 5
+  },
+  {
+    "text": "he use of real-world datasets in class activities. Concepts that initially seem difficult become easier through repeated examples. Many reviews recommend attending lectures regularly.",
+    "source": "prof_jonathan_wells_reviews.txt",
+    "chunk_index": 6
+  },
+  {
+    "text": "ny reviews recommend attending lectures regularly. Review 6: The professor receives positive feedback for providing detailed explanations. Students feel comfortable seeking help when needed.",
+    "source": "prof_jonathan_wells_reviews.txt",
+    "chunk_index": 7
+  },
+  {
+    "text": "tudents feel comfortable seeking help when needed. Exams focus on applying concepts rather than memorizing formulas. Review 7: Many students report gaining confidence in statistics during the course. Class materials are organized and accessible.",
+    "source": "prof_jonathan_wells_reviews.txt",
+    "chunk_index": 8
+  },
+  {
+    "text": "rse. Class materials are organized and accessible. Feedback on assignments helps students identify areas for improvement. Review 8: Students frequently recommend the course to others interested in data analysis.",
+    "source": "prof_jonathan_wells_reviews.txt",
+    "chunk_index": 9
+  },
+  {
+    "text": "the course to others interested in data analysis. The learning environment is supportive and engaging. Overall satisfaction with the course is very high.",
+    "source": "prof_jonathan_wells_reviews.txt",
+    "chunk_index": 10
+  },
+  {
+    "text": "Professor: Nicole Eikmeier | Department: Computer Science Review 1: Students describe the professor as approachable and supportive throughout the semester. Lectures are organized and concepts are introduced gradually.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 0
+  },
+  {
+    "text": "e organized and concepts are introduced gradually. Many students feel comfortable asking questions during class. The learning environment is welcoming for students with different experience levels.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 1
+  },
+  {
+    "text": "ing for students with different experience levels. Review 2: Several students mention that assignments reinforce lecture material effectively. Instructions are generally clear and expectations are communicated early.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 2
+  },
+  {
+    "text": "lly clear and expectations are communicated early. The workload is considered reasonable for the course level. Students appreciate the structured approach to learning.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 3
+  },
+  {
+    "text": "ts appreciate the structured approach to learning. Review 3: Reviews often highlight the professor's patience when explaining difficult concepts. Office hours are frequently described as helpful and encouraging.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 4
+  },
+  {
+    "text": "e frequently described as helpful and encouraging. Students feel supported when working through challenging assignments. Feedback is detailed and constructive.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 5
+  },
+  {
+    "text": "ssignments. Feedback is detailed and constructive. Review 4: Many students appreciate the emphasis on understanding concepts rather than memorizing information. Class examples help connect theory to practical applications.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 6
+  },
+  {
+    "text": "les help connect theory to practical applications. Exams are considered fair and closely aligned with course content. Preparation through homework is usually sufficient. Review 5: Students report that the classroom atmosphere is positive and engaging.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 7
+  },
+  {
+    "text": "the classroom atmosphere is positive and engaging. Group activities help reinforce key topics. The professor regularly checks for understanding before moving forward. Participation is encouraged without feeling pressured.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 8
+  },
+  {
+    "text": "icipation is encouraged without feeling pressured. Review 6: Several reviews mention that communication is one of the professor's strengths. Course materials are organized and easy to access. Assignment deadlines are clearly communicated.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 9
+  },
+  {
+    "text": "ss. Assignment deadlines are clearly communicated. Students rarely feel confused about course expectations. Review 7: Students often recommend the course to those new to computer science. Concepts are explained clearly and progressively.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 10
+  },
+  {
+    "text": "Concepts are explained clearly and progressively. The professor creates an environment where mistakes are viewed as learning opportunities. Confidence tends to grow throughout the semester.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 11
+  },
+  {
+    "text": "Confidence tends to grow throughout the semester. Review 8: Many students leave the course feeling they gained a strong foundation in the subject. The workload is manageable with consistent effort. Support resources are easy to access.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 12
+  },
+  {
+    "text": "tent effort. Support resources are easy to access. Overall satisfaction with the learning experience is very high.",
+    "source": "prof_nicole_eikmeier_reviews.txt",
+    "chunk_index": 13
+  },
+  {
+    "text": "Professor: Sam Rebelsky | Department: Computer Science Review 1: Students frequently describe the professor as enthusiastic and highly engaged during class. Lectures encourage active participation and discussion rather than passive note-taking.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 0
+  },
+  {
+    "text": "on and discussion rather than passive note-taking. Many students appreciate the welcoming atmosphere created in the classroom. The learning environment feels supportive and collaborative.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 1
+  },
+  {
+    "text": "ng environment feels supportive and collaborative. Review 2: Several reviews mention that assignments focus on problem-solving and creativity. Students are encouraged to explore multiple approaches to a solution.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 2
+  },
+  {
+    "text": "aged to explore multiple approaches to a solution. Feedback is detailed and helps students improve their programming skills. Learning is emphasized over simply getting the correct answer.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 3
+  },
+  {
+    "text": "emphasized over simply getting the correct answer. Review 3: Office hours receive overwhelmingly positive feedback from students. The professor is approachable and willing to spend significant time helping students understand difficult concepts.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 4
+  },
+  {
+    "text": "me helping students understand difficult concepts. Many students report gaining confidence after attending office hours. Questions are always encouraged. Review 4: Students appreciate the emphasis on understanding fundamental concepts.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 5
+  },
+  {
+    "text": "he emphasis on understanding fundamental concepts. Rather than memorizing syntax, the course focuses on reasoning and computational thinking. Class activities reinforce important ideas through hands-on practice.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 6
+  },
+  {
+    "text": "inforce important ideas through hands-on practice. Many students feel the approach improves long-term learning. Review 5: Reviews often highlight the professor's sense of humor and enthusiasm for teaching. Lectures are engaging and interactive.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 7
+  },
+  {
+    "text": "r teaching. Lectures are engaging and interactive. Students feel comfortable participating even when they are unsure of an answer. The classroom environment encourages experimentation and growth.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 8
+  },
+  {
+    "text": "environment encourages experimentation and growth. Review 6: Many students mention receiving extensive feedback on assignments and projects. Comments are constructive and focused on helping students improve.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 9
+  },
+  {
+    "text": "structive and focused on helping students improve. The grading process is transparent and expectations are clear. Students feel supported throughout the semester. Review 7: Students frequently recommend the course to those new to computer science.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 10
+  },
+  {
+    "text": "mmend the course to those new to computer science. Concepts are introduced in an accessible way without sacrificing depth. The professor works to ensure that all students can succeed. Consistent effort is rewarded.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 11
+  },
+  {
+    "text": "udents can succeed. Consistent effort is rewarded. Review 8: Many reviews describe the course as challenging but rewarding. Students leave with stronger programming and problem-solving skills. The supportive learning environment is often praised.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 12
+  },
+  {
+    "text": "supportive learning environment is often praised. Overall satisfaction with the course is extremely high.",
+    "source": "prof_sam_rebelsky_reviews.txt",
+    "chunk_index": 13
+  },
+  {
+    "text": "Professor: Shonda Kuiper | Department: Statistics Review 1: Students describe the professor as energetic and passionate about statistics. Lectures frequently use real-world examples to demonstrate statistical concepts.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 0
+  },
+  {
+    "text": "orld examples to demonstrate statistical concepts. Many students appreciate seeing how statistics applies to everyday decision-making. The material feels practical and relevant.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 1
+  },
+  {
+    "text": "making. The material feels practical and relevant. Review 2: Several reviews mention that difficult topics are explained clearly and patiently. Concepts are broken into manageable pieces before being applied to larger problems.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 2
+  },
+  {
+    "text": "le pieces before being applied to larger problems. Students feel supported when learning unfamiliar material. The teaching style is approachable and effective. Review 3: Office hours are often described as welcoming and helpful.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 3
+  },
+  {
+    "text": "ours are often described as welcoming and helpful. The professor takes time to answer questions thoroughly and provide additional examples. Students feel comfortable seeking assistance outside of class. Extra support is readily available.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 4
+  },
+  {
+    "text": "side of class. Extra support is readily available. Review 4: Students appreciate the emphasis on data interpretation and critical thinking. Assignments encourage applying statistical methods rather than memorizing formulas.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 5
+  },
+  {
+    "text": "atistical methods rather than memorizing formulas. The workload is manageable with consistent effort. Learning outcomes are considered strong. Review 5: Many reviews highlight the professor's ability to create an engaging classroom environment.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 6
+  },
+  {
+    "text": "ility to create an engaging classroom environment. Participation is encouraged and students feel comfortable contributing. Discussions help reinforce key concepts. The atmosphere is positive and supportive.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 7
+  },
+  {
+    "text": "ncepts. The atmosphere is positive and supportive. Review 6: Exams are generally viewed as fair and aligned with course content. Students who complete assignments and attend class feel well prepared.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 8
+  },
+  {
+    "text": "e assignments and attend class feel well prepared. Understanding concepts is more important than memorization. Expectations are communicated clearly. Review 7: Students frequently mention that feedback on assignments is useful and constructive.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 9
+  },
+  {
+    "text": "eedback on assignments is useful and constructive. Comments help identify mistakes and improve understanding. The professor encourages growth throughout the semester. Students appreciate the detailed guidance.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 10
+  },
+  {
+    "text": "mester. Students appreciate the detailed guidance. Review 8: Many students recommend the course to others interested in statistics or data analysis. The combination of supportive instruction and practical applications is frequently praised.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 11
+  },
+  {
+    "text": "and practical applications is frequently praised. Students leave with greater confidence in their statistical abilities. Overall experiences are highly positive.",
+    "source": "prof_shonda_kuiper_reviews.txt",
+    "chunk_index": 12
+  },
+  {
+    "text": "Professor: Stef Torabzadeh | Department: Computer Science Review 1: Students frequently describe the professor as energetic and enthusiastic about teaching. Lectures are interactive and encourage participation.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 0
+  },
+  {
+    "text": "tures are interactive and encourage participation. Many students appreciate the real-world examples used throughout the course. The class environment feels engaging and collaborative.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 1
+  },
+  {
+    "text": "lass environment feels engaging and collaborative. Review 2: Several reviews mention that assignments require critical thinking and creativity. Projects are designed to help students apply concepts in practical situations.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 2
+  },
+  {
+    "text": "p students apply concepts in practical situations. Students often feel challenged in a productive way. The workload is moderate but rewarding. Review 3: Office hours receive positive feedback from many students.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 3
+  },
+  {
+    "text": "ours receive positive feedback from many students. Questions are answered thoroughly and patiently. Students feel comfortable seeking additional help outside of class. Extra guidance is available when assignments become difficult.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 4
+  },
+  {
+    "text": "ce is available when assignments become difficult. Review 4: Students describe the professor as passionate about student success. Course expectations are clearly communicated from the beginning.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 5
+  },
+  {
+    "text": "tions are clearly communicated from the beginning. Feedback on assignments helps students improve their work. Grading is considered fair and consistent. Review 5: Many students appreciate the balance between theory and hands-on learning.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 6
+  },
+  {
+    "text": "the balance between theory and hands-on learning. Class activities reinforce important concepts effectively. Exams focus on understanding rather than memorization. Students feel well prepared when they stay engaged with course materials.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 7
+  },
+  {
+    "text": "ared when they stay engaged with course materials. Review 6: Reviews often mention that lectures are well structured and easy to follow. Concepts build logically throughout the semester.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 8
+  },
+  {
+    "text": "Concepts build logically throughout the semester. Students appreciate how complex topics are broken into manageable pieces. Learning feels progressive rather than overwhelming.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 9
+  },
+  {
+    "text": "arning feels progressive rather than overwhelming. Review 7: Several students note that teamwork and collaboration are encouraged. Projects provide opportunities to practice communication skills.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 10
+  },
+  {
+    "text": "de opportunities to practice communication skills. The professor creates an environment where students feel comfortable contributing ideas. Participation is viewed positively.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 11
+  },
+  {
+    "text": "ibuting ideas. Participation is viewed positively. Review 8: Students frequently recommend the course to others interested in computer science. The combination of supportive instruction and meaningful projects is often praised.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 12
+  },
+  {
+    "text": "truction and meaningful projects is often praised. Consistent effort leads to strong learning outcomes. Overall reviews are highly positive.",
+    "source": "prof_stef_toraba_reviews.txt",
+    "chunk_index": 13
+  }
+]
