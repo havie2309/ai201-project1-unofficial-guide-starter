@@ -9,42 +9,47 @@
 
 ## Domain
 
-<!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
+Student-written professor and course reviews at Grinnell College. This knowledge 
+is valuable because official university channels only provide course descriptions 
+and faculty bios — they don't tell students whether a professor curves grades, 
+what their exams are actually like, how heavy the workload is, or what teaching 
+style to expect. Students share this information informally through Rate My 
+Professors and word of mouth, making it hard to search or summarize across 
+multiple professors at once.
 
 ---
 
 ## Documents
 
-<!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
-     Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
-
 | # | Source | Description | URL or location |
 |---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | Rate My Professors | Reviews for Prof. Andrea Hall | documents/prof_andrea_hall_reviews.txt |
+| 2 | Rate My Professors | Reviews for Prof. Charles Curtsinger | documents/prof_charles_curtsinger_reviews.txt |
+| 3 | Rate My Professors | Reviews for Prof. Collin Nolte | documents/prof_collin_nolte_reviews.txt |
+| 4 | Rate My Professors | Reviews for Prof. Cora Jakubiak | documents/prof_cora_jakubiak_reviews.txt |
+| 5 | Rate My Professors | Reviews for Prof. Jenny Kenkel | documents/prof_jenny_kenkel_reviews.txt |
+| 6 | Rate My Professors | Reviews for Prof. Jonathan Wells | documents/prof_jonathan_wells_reviews.txt |
+| 7 | Rate My Professors | Reviews for Prof. Nicole Eikmeier | documents/prof_nicole_eikmeier_reviews.txt |
+| 8 | Rate My Professors | Reviews for Prof. Sam Rebelsky | documents/prof_sam_rebelsky_reviews.txt |
+| 9 | Rate My Professors | Reviews for Prof. Shonda Kuiper | documents/prof_shonda_kuiper_reviews.txt |
+| 10 | Rate My Professors | Reviews for Prof. Stef Toraba | documents/prof_stef_toraba_reviews.txt |
 
 ---
 
 ## Chunking Strategy
 
-<!-- How will you split documents into chunks?
-     State your chunk size (in tokens or characters), overlap size, and explain why those
-     numbers fit the structure of your documents.
-     A review-heavy corpus warrants different chunking than a long FAQ. -->
+**Chunk size:** 400 characters
 
-**Chunk size:**
+**Overlap:** 80 characters
 
-**Overlap:**
-
-**Reasoning:**
+**Reasoning:** Each review is 4–6 sentences long, typically 200–400 characters. 
+Using 400-character chunks means each chunk captures roughly one complete review, 
+preserving the full opinion in a single retrievable unit. Overlap of 80 characters 
+ensures that if a key fact (like exam style or grading) falls near a chunk boundary, 
+it appears in at least one complete chunk. Chunks smaller than 200 characters would 
+split individual reviews into fragments with no standalone meaning; chunks larger 
+than 600 characters would merge multiple reviews together, diluting the semantic 
+signal for retrieval.
 
 ---
 
