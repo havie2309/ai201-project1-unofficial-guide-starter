@@ -1,5 +1,8 @@
 # The Unofficial Guide — Project 1
 
+## Demo Video
+[Watch the demo on Loom](https://www.loom.com/share/37a97ceeefc04d4e82462c2c5485100d)
+
 ---
 
 ## Domain
