@@ -1,103 +1,136 @@
 # The Unofficial Guide — Project 1
 
-> **How to use this template:**
-> Complete each section *after* you've built and tested the corresponding part of your system.
-> Do not write placeholder text — if a section isn't done yet, leave it blank and come back.
-> Every section below is required for submission. One-liners will not receive full credit.
-
 ---
 
 ## Domain
 
-<!-- What topic or category of knowledge does your system cover?
-     Why is this knowledge valuable, and why is it hard to find through official channels?
-     Example: "Student reviews of CS professors at [university] — useful because official
-     course descriptions don't reflect teaching style, exam difficulty, or workload." -->
+Student-written professor and course reviews at Grinnell College. This knowledge 
+is valuable because official university channels only provide course descriptions 
+and faculty bios — they don't tell students whether a professor curves grades, 
+what their exams are actually like, how heavy the workload is, or what teaching 
+style to expect. Students share this information informally through Rate My 
+Professors and word of mouth, making it hard to search or summarize across 
+multiple professors at once.
 
 ---
 
 ## Document Sources
 
-<!-- List every source you collected documents from.
-     Be specific: include URLs, subreddit names, forum thread titles, or file names.
-     Aim for variety — sources that together cover different subtopics or perspectives. -->
-
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | Rate My Professors | Professor reviews | documents/prof_andrea_hall_reviews.txt |
+| 2 | Rate My Professors | Professor reviews | documents/prof_charles_curtsinger_reviews.txt |
+| 3 | Rate My Professors | Professor reviews | documents/prof_collin_nolte_reviews.txt |
+| 4 | Rate My Professors | Professor reviews | documents/prof_cora_jakubiak_reviews.txt |
+| 5 | Rate My Professors | Professor reviews | documents/prof_jenny_kenkel_reviews.txt |
+| 6 | Rate My Professors | Professor reviews | documents/prof_jonathan_wells_reviews.txt |
+| 7 | Rate My Professors | Professor reviews | documents/prof_nicole_eikmeier_reviews.txt |
+| 8 | Rate My Professors | Professor reviews | documents/prof_sam_rebelsky_reviews.txt |
+| 9 | Rate My Professors | Professor reviews | documents/prof_shonda_kuiper_reviews.txt |
+| 10 | Rate My Professors | Professor reviews | documents/prof_stef_toraba_reviews.txt |
 
 ---
 
 ## Chunking Strategy
 
-<!-- Describe your chunking approach with enough specificity that someone else could reproduce it.
-     Include:
-     - Chunk size (characters or tokens) and why that size fits your documents
-     - Overlap size and why (or why not) you used overlap
-     - Any preprocessing you did before chunking (e.g., stripping HTML, removing headers)
-     - What your final chunk count was across all documents -->
+**Chunk size:** 250 characters
 
-**Chunk size:**
+**Overlap:** 50 characters
 
-**Overlap:**
+**Why these choices fit your documents:** Each review is 4–6 sentences long. 
+Using 250-character chunks with sentence-boundary splitting means each chunk 
+captures 2–3 complete sentences — enough context to be meaningful on its own 
+without merging multiple reviews together. The 50-character overlap ensures 
+that key facts near chunk boundaries appear in at least one complete chunk. 
+We use sentence-boundary splitting (regex on punctuation) rather than hard 
+character cuts so chunks never end mid-word or mid-sentence.
 
-**Why these choices fit your documents:**
+**Final chunk count:** 135 chunks across 10 documents
 
-**Final chunk count:**
+---
+
+## Sample Chunks
+
+**Chunk 1** (prof_andrea_hall_reviews.txt, chunk #0)
+
+**Chunk 2** (prof_andrea_hall_reviews.txt, chunk #1)
+
+**Chunk 3** (prof_collin_nolte_reviews.txt, chunk #0)
+
+**Chunk 4** (prof_sam_rebelsky_reviews.txt, chunk #2)
+
+**Chunk 5** (prof_jonathan_wells_reviews.txt, chunk #3)
 
 ---
 
 ## Embedding Model
 
-<!-- Name the embedding model you used and explain your choice.
-     Then answer: if you were deploying this system for real users and cost wasn't a constraint,
-     what tradeoffs would you weigh in choosing a different model?
-     Consider: context length limits, multilingual support, accuracy on domain-specific text,
-     latency, and local vs. API-hosted. -->
+**Model used:** all-MiniLM-L6-v2 via sentence-transformers (runs locally, 
+no API key required, no rate limits)
 
-**Model used:**
-
-**Production tradeoff reflection:**
+**Production tradeoff reflection:** For a real deployment I would consider 
+OpenAI's text-embedding-3-small — it has higher accuracy on short 
+opinion-style text and a longer context window (8191 tokens vs 256 tokens 
+for all-MiniLM-L6-v2), but comes with per-token API costs and rate limits. 
+I would also evaluate multilingual support if the system needed to serve 
+non-English reviews. For latency-sensitive production systems, a locally 
+hosted model avoids API round-trip time entirely. all-MiniLM-L6-v2 is the 
+right choice here because it runs locally with no cost, no rate limits, and 
+performs well on short sentence-level similarity — which matches the 
+structure of professor reviews.
 
 ---
 
 ## Grounded Generation
 
-<!-- Explain how your system enforces grounding — how does it prevent the LLM from answering
-     beyond the retrieved documents?
-     Describe both your system prompt (what instruction you gave the model) and any structural
-     choices (e.g., how you formatted the context, whether you filtered low-relevance chunks).
-     Do not just say "I told it to use the documents" — show the actual instruction or explain
-     the mechanism. -->
-
 **System prompt grounding instruction:**
 
-**How source attribution is surfaced in the response:**
+**How source attribution is surfaced in the response:** The prompt instructs 
+the model to end every answer by listing which documents it used in the 
+format "Sources: filename.txt, filename.txt". Additionally, the Gradio 
+interface displays a separate "Retrieved from" box that programmatically 
+lists all source filenames from the retrieved chunks, independent of what 
+the LLM writes — so attribution is guaranteed even if the model omits it.
+
+---
+
+## Query Interface
+
+**Input field:** A text box labeled "Your question" with a placeholder 
+example. Users can also click any of 4 example question buttons which 
+auto-fill the input box.
+
+**Output fields:** Two text boxes — "Answer" (the LLM-generated response 
+with inline source citation) and "Retrieved from" (programmatic list of 
+source filenames).
+
+**Sample interaction transcript:**
+
+Query: What do students commonly say about Collin Nolte's teaching style?
+
+Answer: Students describe Professor Collin Nolte as knowledgeable and 
+passionate about physics. His lectures focus on building a strong conceptual 
+understanding before moving into calculations.
+Sources: prof_collin_nolte_reviews.txt
+
+Retrieved from:
+- prof_cora_jakubiak_reviews.txt
+- prof_jonathan_wells_reviews.txt
+- prof_sam_rebelsky_reviews.txt
+- prof_collin_nolte_reviews.txt
+- prof_andrea_hall_reviews.txt
 
 ---
 
 ## Evaluation Report
 
-<!-- Run your 5 test questions from planning.md through your system and record the results.
-     Be honest — a partially accurate or inaccurate result that you explain well is more
-     valuable than a suspiciously perfect result. -->
-
 | # | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
 |---|----------|-----------------|------------------------------|-------------------|-------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Which professor is most frequently described as having helpful office hours? | Sam Rebelsky receives strongest mentions, followed by Wells, Eikmeier, Kuiper | Listed Andrea Hall, Sam Rebelsky, Cora Jakubiak, Jonathan Wells, Nicole Eikmeier as all having helpful office hours but declined to pick one | Relevant | Partially accurate |
+| 2 | Which professors are recommended for students new to their subject area? | Nicole Eikmeier and Sam Rebelsky recommended for CS beginners | Returned Cora Jakubiak and Stef Toraba as recommended for new students | Partially relevant | Partially accurate |
+| 3 | Which professor's course is most focused on real-world applications? | Andrea Hall and Shonda Kuiper receive strongest mentions | Correctly identified Shonda Kuiper, Jonathan Wells, and Andrea Hall | Relevant | Accurate |
+| 4 | What do students commonly say about Collin Nolte's teaching style? | Organized, patient, focused on conceptual understanding | Correctly described as knowledgeable, passionate, focused on conceptual understanding before calculations | Relevant | Accurate |
+| 5 | Which professor receives the most comments about a supportive learning environment? | Cora Jakubiak and Sam Rebelsky most frequently described this way | Returned Jenny Kenkel, Cora Jakubiak, and Sam Rebelsky — named Jenny Kenkel as top based on appearing in two documents | Relevant | Partially accurate |
 
 **Retrieval quality:** Relevant / Partially relevant / Off-target  
 **Response accuracy:** Accurate / Partially accurate / Inaccurate
@@ -106,57 +139,74 @@
 
 ## Failure Case Analysis
 
-<!-- Identify at least one question where retrieval or generation did not work as expected.
-     Write a specific explanation of *why* it failed, tied to a part of the pipeline.
+**Question that failed:** "Which professor is most frequently described as 
+having helpful office hours?" (Question 1)
 
-     "The answer was wrong" is not an explanation.
+**What the system returned:** The system listed five professors as all having 
+helpful office hours but explicitly refused to identify which one receives 
+the most mentions, stating the reviews are "generally positive and similar 
+for all of them."
 
-     "The relevant information was split across a chunk boundary, so retrieval returned
-     only half the context — the model didn't have enough to answer correctly" is an explanation.
+**Root cause (tied to a specific pipeline stage):** This is a retrieval 
+failure caused by the comparison nature of the query. The retrieval stage 
+returns only 5 chunks (top-k=5), and because all professor reviews use 
+similar language around office hours ("welcoming," "helpful," "approachable"), 
+the embedding similarity scores are close together. No single chunk contains 
+enough information to compare frequency across professors — the LLM correctly 
+declines to rank what it cannot determine from the retrieved context alone.
 
-     "The embedding model treated the professor's nickname as out-of-vocabulary and returned
-     results from an unrelated review" is an explanation. -->
-
-**Question that failed:**
-
-**What the system returned:**
-
-**Root cause (tied to a specific pipeline stage):**
-
-**What you would change to fix it:**
+**What you would change to fix it:** Increase top-k to 10–15 so the LLM 
+receives chunks from more professors simultaneously. Alternatively, add 
+metadata filtering so the system can retrieve the top chunk per professor 
+and compare them side by side, rather than retrieving the 5 globally most 
+similar chunks which may cluster around 2–3 professors.
 
 ---
 
 ## Spec Reflection
 
-<!-- Reflect on how planning.md shaped your implementation.
-     Answer both questions with at least 2–3 sentences each. -->
+**One way the spec helped you during implementation:** Writing the chunking 
+strategy section in planning.md before touching any code forced a decision 
+about chunk size upfront. When the initial 400-character fixed-split produced 
+chunks cut mid-word (e.g., "the pra" / "licy discussions"), the spec gave a 
+clear target to fix toward — sentence-boundary splitting that preserves 
+complete thoughts. Without the spec, it would have been easy to skip chunk 
+inspection entirely and only discover the problem during retrieval.
 
-**One way the spec helped you during implementation:**
-
-**One way your implementation diverged from the spec, and why:**
+**One way your implementation diverged from the spec, and why:** The spec 
+specified 400-character chunks with 80-character overlap. During Milestone 3, 
+the chunk count came out to only 71 — too few for reliable retrieval. The 
+chunk size was reduced to 250 characters with 50-character overlap to produce 
+135 chunks. This divergence was necessary because the actual documents turned 
+out to be shorter than anticipated — each review averages 4–5 sentences 
+rather than the longer paragraphs assumed during planning.
 
 ---
 
 ## AI Usage
 
-<!-- Describe at least 2 specific instances where you used an AI tool during this project.
-     For each: what did you give the AI as input, what did it produce, and what did you
-     change, override, or direct differently?
-
-     "I used Claude to help me code" is not sufficient.
-     "I gave Claude my Chunking Strategy section from planning.md and asked it to implement
-     chunk_text(). It returned a function using a fixed character split. I overrode the
-     chunk size from 500 to 200 because my documents are short reviews, not long guides." -->
-
 **Instance 1**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- *What I gave the AI:* The Chunking Strategy section from planning.md 
+specifying 400-character chunks with 80-character overlap, plus the pipeline 
+diagram showing the five stages.
+- *What it produced:* A complete ingest.py with load_documents(), 
+clean_text(), and chunk_text() functions using fixed character splitting.
+- *What I changed or overrode:* The fixed character split was cutting chunks 
+mid-word and mid-sentence. I asked Claude to rewrite chunk_text() to split 
+on sentence boundaries using regex instead. I also changed the chunk size 
+from 400 to 250 after seeing the total chunk count was only 71 — too few 
+for reliable retrieval.
 
 **Instance 2**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- *What I gave the AI:* The Retrieval Approach section from planning.md 
+specifying all-MiniLM-L6-v2 and ChromaDB, plus the grounding requirement 
+that answers must come only from retrieved documents with source attribution.
+- *What it produced:* Complete embed.py, retrieve.py, query.py, and app.py 
+files wiring all stages together with a Gradio interface.
+- *What I changed or overrode:* The initial Gradio UI used a basic layout 
+with no example questions and an emoji in the title. I directed Claude to 
+redesign the UI with a cleaner dark-button style, remove the emoji, add 4 
+clickable example question buttons, and stack the answer and sources 
+vertically instead of side by side.
