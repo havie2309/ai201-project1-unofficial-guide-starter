@@ -1,0 +1,25 @@
+Professor: Charles Curtsinger | Department: Computer Science
+
+Review 1:
+Students frequently mention that the course moves at a fast pace. Lectures focus heavily on understanding how systems work under the hood. Assignments can be challenging but are closely tied to material covered in class. Many students recommend starting projects early.
+
+Review 2:
+The professor is described as knowledgeable and passionate about computer systems. Office hours are helpful for debugging difficult programming assignments. Several students mention learning a great deal even when the workload feels demanding.
+
+Review 3:
+Students say projects require strong problem-solving skills and independent thinking. Instructions are generally clear, but assignments can take longer than expected. Those who keep up with the material tend to perform well.
+
+Review 4:
+Many reviews describe the class as difficult but rewarding. Exams emphasize conceptual understanding rather than memorization. Students appreciate seeing real-world applications of systems concepts.
+
+Review 5:
+Lectures are often described as engaging and detailed. Students recommend attending class regularly because examples discussed in lecture appear later in assignments. The workload is above average but manageable.
+
+Review 6:
+Several students mention that programming projects are the most valuable part of the course. Feedback on assignments helps students improve over time. Collaboration policies are clearly communicated.
+
+Review 7:
+Students appreciate the professor's technical expertise and practical examples. Some reviews note that the pace may feel intimidating for beginners. Consistent effort throughout the semester is important.
+
+Review 8:
+The course is frequently recommended to students interested in software engineering and systems programming. Expectations are high, but many students feel the experience prepares them well for future coursework.

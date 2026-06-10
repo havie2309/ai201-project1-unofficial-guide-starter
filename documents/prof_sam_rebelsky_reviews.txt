@@ -1,0 +1,25 @@
+Professor: Sam Rebelsky | Department: Computer Science
+
+Review 1:
+Students frequently describe the professor as enthusiastic and highly engaged during class. Lectures encourage active participation and discussion rather than passive note-taking. Many students appreciate the welcoming atmosphere created in the classroom. The learning environment feels supportive and collaborative.
+
+Review 2:
+Several reviews mention that assignments focus on problem-solving and creativity. Students are encouraged to explore multiple approaches to a solution. Feedback is detailed and helps students improve their programming skills. Learning is emphasized over simply getting the correct answer.
+
+Review 3:
+Office hours receive overwhelmingly positive feedback from students. The professor is approachable and willing to spend significant time helping students understand difficult concepts. Many students report gaining confidence after attending office hours. Questions are always encouraged.
+
+Review 4:
+Students appreciate the emphasis on understanding fundamental concepts. Rather than memorizing syntax, the course focuses on reasoning and computational thinking. Class activities reinforce important ideas through hands-on practice. Many students feel the approach improves long-term learning.
+
+Review 5:
+Reviews often highlight the professor's sense of humor and enthusiasm for teaching. Lectures are engaging and interactive. Students feel comfortable participating even when they are unsure of an answer. The classroom environment encourages experimentation and growth.
+
+Review 6:
+Many students mention receiving extensive feedback on assignments and projects. Comments are constructive and focused on helping students improve. The grading process is transparent and expectations are clear. Students feel supported throughout the semester.
+
+Review 7:
+Students frequently recommend the course to those new to computer science. Concepts are introduced in an accessible way without sacrificing depth. The professor works to ensure that all students can succeed. Consistent effort is rewarded.
+
+Review 8:
+Many reviews describe the course as challenging but rewarding. Students leave with stronger programming and problem-solving skills. The supportive learning environment is often praised. Overall satisfaction with the course is extremely high.
