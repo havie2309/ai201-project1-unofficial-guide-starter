@@ -55,73 +55,99 @@ signal for retrieval.
 
 ## Retrieval Approach
 
-<!-- Which embedding model are you using (e.g., all-MiniLM-L6-v2 via sentence-transformers)?
-     How many chunks will you retrieve per query (top-k)?
-     If you were deploying this for real users and cost wasn't a constraint, what tradeoffs
-     would you weigh in choosing a different embedding model — context length, multilingual
-     support, accuracy on domain-specific text, latency? -->
+**Embedding model:** all-MiniLM-L6-v2 via sentence-transformers (runs locally, 
+no API key required)
 
-**Embedding model:**
+**Top-k:** 5
 
-**Top-k:**
-
-**Production tradeoff reflection:**
+**Production tradeoff reflection:** For a real deployment I would consider 
+OpenAI's text-embedding-3-small — it has higher accuracy on short opinion-style 
+text and a longer context window, but comes with per-token API costs and rate 
+limits. I would also evaluate multilingual support if the system needed to serve 
+non-English reviews. all-MiniLM-L6-v2 is the right choice here because it runs 
+locally with no cost, no rate limits, and performs well on short sentence-level 
+similarity — which matches the structure of professor reviews.
 
 ---
 
 ## Evaluation Plan
 
-<!-- List your 5 test questions with their expected correct answers.
-     Questions should be specific enough that you can judge whether the system's response
-     is right or wrong. "What are good dining halls?" is too vague.
-     "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
-
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | Which professor is most frequently described as having helpful office hours? | Sam Rebelsky receives the strongest and most detailed mentions for helpful office hours, followed by Jonathan Wells, Nicole Eikmeier, and Shonda Kuiper |
+| 2 | Which professors are recommended for students who are new to their subject area? | Nicole Eikmeier and Sam Rebelsky are frequently recommended for beginners in computer science, with reviews emphasizing supportive teaching and approachable explanations |
+| 3 | Which professor's course is most focused on real-world applications? | Andrea Hall and Shonda Kuiper receive the strongest mentions for connecting course material to real-world examples, with Jenny Kenkel also frequently described this way |
+| 4 | What do students commonly say about Collin Nolte's teaching style? | Students describe Collin Nolte as organized, patient, and focused on building conceptual understanding through step-by-step explanations and problem solving |
+| 5 | Which professor receives the most comments about creating a supportive learning environment? | Cora Jakubiak and Sam Rebelsky are most frequently described as creating supportive, welcoming, and collaborative classroom environments |
 
 ---
 
 ## Anticipated Challenges
 
-<!-- What could go wrong? Name at least two specific risks with reasoning.
-     Consider: noisy or inconsistent documents, missing source attribution, off-topic
-     retrieval, chunks that split key information across boundaries. -->
+1. Several reviews across different professors use very similar language 
+(e.g., "supportive environment," "clear explanations," "fair grading"). 
+This could cause retrieval to return chunks from the wrong professor when 
+a query asks about a specific person — the embedding similarity may be 
+high even though the source is irrelevant.
 
-1.
-
-2.
+2. Some questions ask the system to compare across multiple professors 
+(e.g., "which professor is most..."). A single retrieved chunk won't 
+contain enough information to answer a comparison question — the system 
+would need chunks from multiple files simultaneously, which may dilute 
+or confuse the generated response.
 
 ---
 
 ## Architecture
 
-<!-- Draw a diagram of your pipeline showing the five stages:
-     Document Ingestion → Chunking → Embedding + Vector Store → Retrieval → Generation
-     Label each stage with the tool or library you're using.
-     You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
-     You'll use this diagram as context when prompting AI tools to implement each stage. -->
+```
+[.txt files in /documents]
+         ↓
+Document Ingestion
+(Python / open() + os.listdir())
+         ↓
+Cleaning
+(remove extra whitespace, normalize text)
+         ↓
+Chunking
+(400 char chunks, 80 char overlap)
+         ↓
+Embedding
+(sentence-transformers / all-MiniLM-L6-v2)
+         ↓
+Vector Store
+(ChromaDB — stored locally in /chroma_db)
+         ↓
+Retrieval
+(semantic search, top-5 chunks)
+         ↓
+Generation
+(Groq API / llama-3.3-70b-versatile)
+         ↓
+Response with Source Attribution
+(Gradio UI at localhost:7860)
+```
 
 ---
 
 ## AI Tool Plan
 
-<!-- For each part of the pipeline below, describe:
-     - Which AI tool you plan to use (Claude, Copilot, ChatGPT, etc.)
-     - What you'll give it as input (which sections of this planning.md, which requirements)
-     - What you expect it to produce
-     - How you'll verify the output matches your spec
-
-     "I'll use AI to help me code" is not a plan.
-     "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
-     with my specified chunk size and overlap" is a plan. -->
-
 **Milestone 3 — Ingestion and chunking:**
+I will give Claude my Chunking Strategy section and Documents section and ask 
+it to implement ingest.py — specifically the load_documents(), clean_text(), 
+and chunk_text() functions using 400-character chunks with 80-character overlap. 
+I will verify the output by printing 5 sample chunks and checking they each 
+contain one complete review.
 
 **Milestone 4 — Embedding and retrieval:**
+I will give Claude my Retrieval Approach section and architecture diagram and 
+ask it to implement embed.py and retrieve.py using all-MiniLM-L6-v2 and 
+ChromaDB. I will verify by running 3 test queries and checking that returned 
+chunks are visibly relevant and have distance scores below 0.5.
 
 **Milestone 5 — Generation and interface:**
+I will give Claude my grounding requirement and ask it to implement query.py 
+with a prompt that instructs the LLM to answer only from retrieved context, 
+and app.py with a Gradio interface showing the answer and source files. I will 
+verify grounding by asking a question my documents don't cover and confirming 
+the system refuses to answer.
